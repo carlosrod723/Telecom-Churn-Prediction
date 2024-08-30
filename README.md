@@ -59,7 +59,23 @@ Telecom-Churn-Prediction/ │ ├── README.md ├── LICENSE ├── re
 3. Monitor the model for data and model drift.
 
 ## Results
-The results of the model, including accuracy, precision, recall, and any visualizations, will be detailed here.
+The project developed three machine learning models to predict customer churn: Logistic Regression, Random Forest, and XGBoost. The performance of these models was evaluated based on F1 score and recall, which are critical for identifying customers at risk of churning.
+
+| Model              | Train F1 Score | Train Recall | Test F1 Score | Test Recall |
+|--------------------|----------------|--------------|---------------|-------------|
+| Logistic Regression| 0.6097         | 0.4874       | 0.3333        | 0.2457      |
+| Random Forest      | 0.9943         | 0.9903       | 0.4434        | 0.3946      |
+| XGBoost            | 0.8252         | 0.7850       | 0.4929        | 0.4331      |
+
+### Business Implications
+
+- **Logistic Regression**: The model struggles to accurately identify customers who are likely to churn, leading to potential revenue loss due to missed opportunities for customer retention.
+- **Random Forest**: Despite high performance on training data, this model overfits and fails to generalize well to unseen data, making it unreliable for predicting churn.
+- **XGBoost**: This model provides the best balance between precision and recall, making it the most effective for identifying customers at risk of churning. The model's predictions can help the telecom company implement targeted retention strategies, reducing churn and increasing customer loyalty.
+
+### Conclusion
+
+XGBoost is recommended as the most reliable model for predicting customer churn, based on its performance metrics. The model's ability to generalize well to new data makes it a valuable tool for maintaining customer retention and reducing churn in the telecom industry.
 
 ## Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
